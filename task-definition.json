@@ -72,8 +72,5 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2026-01-13T15:24:19.776Z",
-    "registeredBy": "arn:aws:iam::767000629547:root",
-    "enableFaultInjection": false,
     "tags": []
 }
