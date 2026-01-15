@@ -29,7 +29,7 @@ jobs:
       # 4️⃣ Build & push Docker image
       - name: Build and push Docker image
         run: |
-          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/scriptlogger
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/timestampscript
 
           docker buildx build \
             --platform linux/amd64 \
@@ -40,6 +40,6 @@ jobs:
       - name: Deploy to ECS
         run: |
           aws ecs update-service \
-            --cluster scriptlogger-cluster \
-            --service scriptlogger-service \
+            --cluster timestamp-cluster \
+            --service timestampscript-service \
             --force-new-deployment
