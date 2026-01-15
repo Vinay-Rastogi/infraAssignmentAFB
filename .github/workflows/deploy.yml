@@ -44,7 +44,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: timestampscript
+        container-name: timestamp-container
         image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:latest
 
     - name: Deploy to ECS
